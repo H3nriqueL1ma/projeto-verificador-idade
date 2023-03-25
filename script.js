@@ -14,7 +14,7 @@ function verify(event) {
     const birth_ = Number(birth.value)
     const age = year - birth_
     const sex = document.querySelector('input[name="options"]:checked').value
-    texto.innerHTML = ''
+    text.innerHTML = ''
 
     if (birth_ > year || birth_ <= 0) {
         alert('[ERROR]: ANO INVÁLIDO!')
