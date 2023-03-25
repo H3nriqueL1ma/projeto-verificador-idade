@@ -19,15 +19,15 @@ section {
   margin-right: auto;
   border-radius: 20px;
 }
-section #conteudo_texto {
+section #text_content {
   text-align: left;
   margin-left: 20px;
 }
-section #textoimagem {
+section #text_image {
   position: relative;
   top: 10px;
 }
-section #imagem {
+section #image {
   position: relative;
   margin-top: 10px;
   margin-bottom: 20px;
