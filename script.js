@@ -1,59 +1,65 @@
-const text = document.querySelector('#text')
-const text_img = document.querySelector('#text_image')
-const button = document.querySelector('#verify')
-const birth = document.querySelector('#birth')
-const image = document.querySelector('#image')
+const text = $('#text')
+const text_img = $('#text_image')
+const button = $('#verify')
+const birth = $('#birth')
+const image = $('#image')
 
-button.addEventListener('click', verify)
+button.on('click', verify)
 
 function verify(event) {
     event.preventDefault()
 
     const date = new Date
     const year = date.getFullYear()
-    const birth_ = Number(birth.value)
+    const birth_ = Number(birth.val())
     const age = year - birth_
-    const sex = document.querySelector('input[name="options"]:checked').value
-    text.innerHTML = ''
-
-    if (birth_ > year || birth_ <= 0) {
-        alert('[ERROR]: ANO INVÁLIDO!')
+    const sex = $('input[name="options"]:checked').val()
+    const sexOption = $('input[name="options"]:checked')
+    if (sexOption.length === 0) {
+        alert('[ERROR]: SEXO INVÁLIDO!')
+        return
     }
     else {
-        if (sex === 'male') {
-            if (age < 18 && age > 0) {
-                text_img.innerHTML = `Detectamos Menino com ${age} anos.`
-                image.setAttribute('src', 'foto-bebe-m.png')
-            }
-            else if (age < 20 && age >= 18) {
-                text_img.innerHTML = `Detectamos Menino com ${age} anos.`
-                image.setAttribute('src', 'foto-jovem-m.png')
-            }
-            else if (age < 64 && age >= 20) {
-                text_img.innerHTML = `Detectamos Homem com ${age} anos.`
-                image.setAttribute('src', 'foto-adulto-m.png')
-            }
-            else if (age >= 64) {
-                text_img.innerHTML = `Detectamos Idoso com ${age} anos.`
-                image.setAttribute('src', 'foto-idoso-m.png')
-            }
+        if (birth_ > year || birth_ <= 0) {
+            alert('[ERROR]: ANO INVÁLIDO!')
         }
-        else if (sex === 'female') {
-            if (age < 18 && age > 0) {
-                text_img.innerHTML = `Detectamos Menina com ${age} anos.`
-                image.setAttribute('src', 'foto-bebe-f.png')
+        else {
+            text.text('')
+            if (sex === 'male') {
+                if (age < 18 && age > 0) {
+                    text_img.text(`Detectamos Menino com ${age} anos.`)
+                    image.attr('src', 'foto-bebe-m.png')
+                }
+                else if (age < 20 && age >= 18) {
+                    text_img.text(`Detectamos Menino com ${age} anos.`)
+                    image.attr('src', 'foto-jovem-m.png')
+                }
+                else if (age < 64 && age >= 20) {
+                    text_img.text(`Detectamos Homem com ${age} anos.`)
+                    image.attr('src', 'foto-adulto-m.png')
+                }
+                else if (age >= 64) {
+                    text_img.text(`Detectamos Idoso com ${age} anos.`)
+                    image.attr('src', 'foto-idoso-m.png')
+                }
             }
-            else if (age < 20 && age >= 18) {
-                text_img.innerHTML = `Detectamos Menina com ${age} anos.`
-                image.setAttribute('src', 'foto-jovem-f.png')
-            }
-            else if (age < 64 && age >= 20) {
-                text_img.innerHTML = `Detectamos Mulher com ${age} anos.`
-                image.setAttribute('src', 'foto-adulto-f.png')
-            }
-            else if (age >= 64) {
-                text_img.innerHTML = `Detectamos Idosa com ${age} anos.`
-                image.setAttribute('src', 'foto-idoso-f.png')
+            else if (sex === 'female') {
+                if (age < 18 && age > 0) {
+                    text_img.text(`Detectamos Menina com ${age} anos.`)
+                    image.attr('src', 'foto-bebe-f.png')
+                }
+                else if (age < 20 && age >= 18) {
+                    text_img.text(`Detectamos Menina com ${age} anos.`)
+                    image.attr('src', 'foto-jovem-f.png')
+                }
+                else if (age < 64 && age >= 20) {
+                    text_img.text(`Detectamos Mulher com ${age} anos.`)
+                    image.attr('src', 'foto-adulto-f.png')
+                }
+                else if (age >= 64) {
+                    text_img.text(`Detectamos Idosa com ${age} anos.`)
+                    image.attr('src', 'foto-idoso-f.png')
+                }
             }
         }
     }
