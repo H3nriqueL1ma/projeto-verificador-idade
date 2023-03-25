@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verificador de Idade</title>
+</head>
+<body>
+    <header>
+        <h1><strong>Verificador de Idade</strong></h1>
+    </header>
+
+    <section>
+        <div id="conteudo_texto">
+            <form>
+                <label>Ano de nascimento: <input type="number" name="nasc" id="nasc"></label><br><br>
+                Sexo: 
+                <label><input type="radio" name="options" value="male" required>Masculino</label>
+                <label><input type="radio" name="options" value="female" required>Feminino</label><br><br>
+                <button id="verificar">Verificar</button><br>
+            </form>
+            <p id="texto">Preencha os dados acima para ver o resultado!</p>
+        </div>
+
+        <div>
+            <p id="textoimagem"></p>
+            <img src="" alt="" id="imagem">
+        </div>
+    </section>
+
+    <footer id="redes-sociais">
+        <a href="https://github.com/H3nriqueL1ma" target="_blank"><img src="github.svg" alt="github" class="github"></a>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

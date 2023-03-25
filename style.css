@@ -1,0 +1,48 @@
+body {
+  background-image: url("fundo.jpg");
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+header {
+  color: white;
+}
+
+section {
+  background-color: white;
+  width: 500px;
+  padding-top: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+section #conteudo_texto {
+  text-align: left;
+  margin-left: 20px;
+}
+section #textoimagem {
+  position: relative;
+  top: 10px;
+}
+section #imagem {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.github {
+  width: 2%;
+  transition: 0.2s;
+}
+
+.github:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=style.css.map */
