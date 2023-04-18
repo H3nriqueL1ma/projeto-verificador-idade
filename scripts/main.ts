@@ -29,30 +29,30 @@ if (button.length > 0 && birth.length > 0) {
         if (sex === "male") {
           if (age < 18 && age > 0) {
             text_img.text(`Detectamos Menino com ${age} anos.`);
-            image.attr("src", "../images/foto-bebe-m.png");
+            image.attr("src", "images/foto-bebe-m.png");
           } else if (age < 20 && age >= 18) {
             text_img.text(`Detectamos Menino com ${age} anos.`);
-            image.attr("src", "../images/foto-jovem-m.png");
+            image.attr("src", "images/foto-jovem-m.png");
           } else if (age < 64 && age >= 20) {
             text_img.text(`Detectamos Homem com ${age} anos.`);
-            image.attr("src", "../images/foto-adulto-m.png");
+            image.attr("src", "images/foto-adulto-m.png");
           } else if (age >= 64) {
             text_img.text(`Detectamos Idoso com ${age} anos.`);
-            image.attr("src", "../images/foto-idoso-m.png");
+            image.attr("src", "images/foto-idoso-m.png");
           }
         } else if (sex === "female") {
           if (age < 18 && age > 0) {
             text_img.text(`Detectamos Menina com ${age} anos.`);
-            image.attr("src", "../images/foto-bebe-f.png");
+            image.attr("src", "images/foto-bebe-f.png");
           } else if (age < 20 && age >= 18) {
             text_img.text(`Detectamos Menina com ${age} anos.`);
-            image.attr("src", "../images/foto-jovem-f.png");
+            image.attr("src", "images/foto-jovem-f.png");
           } else if (age < 64 && age >= 20) {
             text_img.text(`Detectamos Mulher com ${age} anos.`);
-            image.attr("src", "../images/foto-adulto-f.png");
+            image.attr("src", "images/foto-adulto-f.png");
           } else if (age >= 64) {
             text_img.text(`Detectamos Idosa com ${age} anos.`);
-            image.attr("src", "../images/foto-idoso-f.png");
+            image.attr("src", "images/foto-idoso-f.png");
           }
         }
       }
